@@ -1,0 +1,25 @@
+<p>This is the top of the app.</p>
+
+<p>
+	<button on:click="fire('open')">
+		Click this to show the fake modal.
+	</button>
+</p>
+
+<p>Below here is where the fake modal would appear.</p>
+
+<FakeModal
+	on:close="fire('close')"
+	message="{{message}}"
+	visible="{{visible}}"
+/>
+
+<p>This is the bottom of the app.</p>
+
+<script>
+import FakeModal from './FakeModal.html'
+
+export default {
+	components: { FakeModal }
+}
+</script>
